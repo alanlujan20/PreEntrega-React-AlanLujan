@@ -1,17 +1,28 @@
-
-import './App.css';
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import NavBar from './Components/NavBar/NavBar';
+import React from "react";
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import NavBar from "../src/componets/NavBar/NavBar";
+import ItemListContainer from "../src/componets/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "../src/componets/ItemDetailContainer/ItemDetailContainer";
+import Error404 from "../src/componets/Error404";
 
 
 function App() {
   return (
-    <div className="App">
-      <NavBar/>
-      <ItemListContainer greeting = 'Donde la música encuentra su hogar'/>
+        <div >      
+          <BrowserRouter >
+            <NavBar />
+            <Routes>
+              <Route path={"/"} element={<ItemListContainer greeting='Donde la música encuentra su hogar' />} />
+              <Route path={"/category/:id"} element={<ItemListContainer />} />
+              <Route path={"/item/:id"} element={<ItemDetailContainer/>} />
+              <Route path={"*"} element={<Error404 />} />
+            </Routes>           
+          </BrowserRouter>
+          
 
 
-    </div>
+         
+        </div>
   );
 }
 
