@@ -1,5 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+<<<<<<< HEAD
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  // <React.StrictMode>
+    <App />
+  // </React.StrictMode>
+);
+=======
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -15,3 +25,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+>>>>>>> 3d63a5400f1c2941835dde6a7782b0baa2acd509
